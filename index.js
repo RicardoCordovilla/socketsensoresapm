@@ -7,7 +7,7 @@ import { config } from './config.js'
 
 const app = express()
 
-app.use(cors({ origin: "*" }))
+app.use(cors())
 app.use(morgan('dev'))
 
 const server = http.createServer(app)
