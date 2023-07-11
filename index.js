@@ -7,7 +7,14 @@ import { config } from './config.js'
 
 const app = express()
 
-app.use(cors())
+const corsOption = {
+    credentials: true,
+    origin: '*'
+}
+
+app.use(cors(corsOption));
+
+
 app.use(morgan('dev'))
 
 const server = http.createServer(app)
